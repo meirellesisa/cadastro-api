@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "5f0fc9ad-2073-4e55-b19f-afa97119ddbe",
+		"name": "Teste Api da crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23601139"
+	},
+	"item": [
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "cadastrar produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nome",
+									"value": "Lapis ",
+									"type": "text"
+								},
+								{
+									"key": "valor",
+									"value": "4.50",
+									"type": "text"
+								},
+								{
+									"key": "quantidade",
+									"value": "300",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/produtos/cadastrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produtos",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar produtos por nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/produtos/consultar/nome/lapis ",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produtos",
+								"consultar",
+								"nome",
+								"lapis "
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar produto por pagina",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/produtos/consultar/pagina/0/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produtos",
+								"consultar",
+								"pagina",
+								"0",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar produto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "codigo_produto",
+									"value": "19",
+									"type": "text"
+								},
+								{
+									"key": "nome",
+									"value": "Mac Book",
+									"type": "text"
+								},
+								{
+									"key": "preco",
+									"value": "23000.99",
+									"type": "text"
+								},
+								{
+									"key": "quantidade",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/produtos/atualizar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produtos",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar produto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/produtos/deletar/id/19",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produtos",
+								"deletar",
+								"id",
+								"19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nota Fiscal",
+			"item": [
+				{
+					"name": "consultar notas por pagina",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:8080/api/notaFiscal/consultar/pagina/0/8",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notaFiscal",
+								"consultar",
+								"pagina",
+								"0",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastrar nota fiscal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "data",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CnpjCpfPrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nomePrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "enderecoPrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "municipioPrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UfPrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "emailPrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "telefonePrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CnpjCpfTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nomeTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "enderecoTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "municipioTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UfTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "emailTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "telefoneTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "descricaoServico",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "valorNota",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/notaFiscal/cadastrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notaFiscal",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar nota fiscal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "data",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CnpjCpfPrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nomePrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "enderecoPrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "municipioPrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UfPrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "emailPrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "telefonePrestador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "CnpjCpfTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "nomeTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "enderecoTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "municipioTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "UfTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "emailTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "telefoneTomador",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "descricaoServico",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "numeroNota",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "valorNota",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/notaFiscal/atualizar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notaFiscal",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/notaFiscal/deletar/id/16",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notaFiscal",
+								"deletar",
+								"id",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
